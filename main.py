@@ -1,5 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, request
-from flask import g
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
@@ -108,3 +107,7 @@ def get_user_info(request_data):
         user_info[key] = value
     
     return user_info
+
+
+if __name__ == '__main__':
+    app.run()
