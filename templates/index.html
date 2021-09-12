@@ -1,48 +1,31 @@
-
 {% extends "base.html" %}
 
 {% block content %}
-
     <form action="/form1-data" method = "POST">
-        <p>Are you vaccinated?<br>
-            <input type="radio" id="vax-yes" name="vaccinated" value="yes">
-            <label for="vax-yes">Yes</label>
-            <input type="radio" id="vax-no" name="vaccinated" value="no">
-            <label for="vax-no">No</label><br>  
-        </p>
+        <h5>Are you vaccinated?</h5>
+        <input type="radio" id="vax-yes" name="vaccinated" value="yes">
+        <label for="vax-yes">Yes</label>
+        <input type="radio" id="vax-no" name="vaccinated" value="no">
+        <label for="vax-no">No</label><br><br>  
 
-        <p>Are you over the age of two?<br>
-            <input type="radio" id="age-yes" name="age" value="yes">
-            <label for="age-yes">Yes</label>
-            <input type="radio" id="age-no" name="age" value="no">
-            <label for="age-no">No</label><br>      
-        </p>
+        <h5>Are you over the age of two?</h5>
+        <input type="radio" id="age-yes" name="age" value="yes">
+        <label for="age-yes">Yes</label>
+        <input type="radio" id="age-no" name="age" value="no">
+        <label for="age-no">No</label><br><br>      
 
-        <p>Will you be indoors?<br>
-            <input type="radio" id="indoors-yes" name="indoors" value="yes">
-            <label for="indoors-yes">Yes</label>
-            <input type="radio" id="indoors-no" name="indoors" value="no">
-            <label for="indoors-no">No</label><br>   
-        </p>
+        <h5>Will you be indoors?</h5>
+        <input type="radio" id="indoors-yes" name="indoors" value="yes">
+        <label for="indoors-yes">Yes</label>
+        <input type="radio" id="indoors-no" name="indoors" value="no">
+        <label for="indoors-no">No</label><br><br>   
 
-        <p>Are you or someone in your household at an elevated risk?<br>
-            <input type="radio" id="hr-yes" name="hr" value="yes">
-            <label for="hr-yes">Yes</label>
-            <input type="radio" id="hr-no" name="hr" value="no">
-            <label for="hr-no">No</label><br>  
-        </p>
+        <h5>Are you or is someone in your household at an elevated risk?</h5>
+        <input type="radio" id="hr-yes" name="hr" value="yes">
+        <label for="hr-yes">Yes</label>
+        <input type="radio" id="hr-no" name="hr" value="no">
+        <label for="hr-no">No</label><br><br>  
 
-        <input type="submit" value="Submit"> 
+        <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit"> 
     </form>
 {% endblock %}
-
-
-
-<!-- 
-#age options 
-<p>Please select your age:</p>
-  <input type="radio" id="age1" name="age">
-  <label for="age1">Under two years</label><br>
-  <input type="radio" id="age2" name="age">
-  <label for="age2">Over two years</label><br>  
-  <input type="submit" value="Submit"> -->

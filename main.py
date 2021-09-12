@@ -13,7 +13,6 @@ def first():
 
 @app.route("/form1-data", methods = ["POST"])
 def form1_data():
-    
     if request.method == "POST":
 
         user_info = get_user_info(request.form)

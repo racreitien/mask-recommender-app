@@ -2,12 +2,11 @@
 
 {% block content %}
     <form action="/form3-data" method = "POST">
-        <p>Are you in a crowded location?:<br>
-            <input type="radio" id="crowded-yes" name="crowded" value = "yes">
-            <label for="crowded-yes">Yes</label><br>
-            <input type="radio" id="crowded-no" name="crowded" value = "no">
-            <label for="crowded-no">No</label><br>  
-            <input type="submit" value="Submit"> 
-        </p>
+        <h5>Will you be in a crowded location?</h5>
+        <input type="radio" id="crowded-yes" name="crowded" value = "yes">
+        <label for="crowded-yes">Yes</label>
+        <input type="radio" id="crowded-no" name="crowded" value = "no">
+        <label for="crowded-no">No</label><br><br>  
+        <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit"> 
     </form>
 {% endblock %}

@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    
     <form action="/form5-data" method = "POST">
-        <p>Is everyone in attendance low risk for covid?<br>
-            <input type="radio" id="lr-yes" name="lr" value = "yes">
-            <label for="lr-yes">Yes</label>
-            <input type="radio" id="lr-no" name="lr" value = "no">
-            <label for="lr-no">No/Not sure</label><br>
-            <input type="submit" value="Submit">
-        </p>
+        <h5>Is everyone in attendance at a low risk for covid?</h5>
+        <input type="radio" id="lr-yes" name="lr" value = "yes">
+        <label for="lr-yes">Yes</label>
+        <input type="radio" id="lr-no" name="lr" value = "no">
+        <label for="lr-no">No/Not sure</label><br><br>
+        <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit">
     </form>
 {% endblock %}
