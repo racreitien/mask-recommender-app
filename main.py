@@ -107,3 +107,7 @@ def get_user_info(request_data):
         user_info[key] = value
     
     return user_info
+
+
+if __name__ == '__main__':
+    app.run()
