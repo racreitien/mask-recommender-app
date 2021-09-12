@@ -17,7 +17,7 @@ def form1_data():
     if request.method == "POST":
 
         user_info = get_user_info(request.form)
-
+        #testing
         # no mask if 2 or younger
         if (user_info["age"] == "no"): 
             return render_template("nomask.html")
