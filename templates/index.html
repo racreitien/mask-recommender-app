@@ -2,11 +2,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% for info in information %}
-        <h4>{{ info }}: {{ information[info] }}</h4>
-    {% endfor %}
 
-    <form action="/second" method = "POST">
+    <form action="/form1-data" method = "POST">
         <p>Are you vaccinated?<br>
             <input type="radio" id="vax-yes" name="vaccinated" value="yes">
             <label for="vax-yes">Yes</label>
