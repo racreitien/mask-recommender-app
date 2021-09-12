@@ -3,27 +3,27 @@
 {% block content %}
     <form action="/form1-data" method = "POST">
         <h5>Are you vaccinated?</h5>
-        <input type="radio" id="vax-yes" name="vaccinated" value="yes">
+        <input type="radio" id="vax-yes" name="vaccinated" value="yes" required>
         <label for="vax-yes">Yes</label>
-        <input type="radio" id="vax-no" name="vaccinated" value="no">
+        <input type="radio" id="vax-no" name="vaccinated" value="no" required>
         <label for="vax-no">No</label><br><br>  
 
         <h5>Are you over the age of two?</h5>
-        <input type="radio" id="age-yes" name="age" value="yes">
+        <input type="radio" id="age-yes" name="age" value="yes" required>
         <label for="age-yes">Yes</label>
-        <input type="radio" id="age-no" name="age" value="no">
+        <input type="radio" id="age-no" name="age" value="no" required>
         <label for="age-no">No</label><br><br>      
 
         <h5>Will you be indoors?</h5>
-        <input type="radio" id="indoors-yes" name="indoors" value="yes">
+        <input type="radio" id="indoors-yes" name="indoors" value="yes" required>
         <label for="indoors-yes">Yes</label>
-        <input type="radio" id="indoors-no" name="indoors" value="no">
+        <input type="radio" id="indoors-no" name="indoors" value="no" required>
         <label for="indoors-no">No</label><br><br>   
 
         <h5>Are you or is someone in your household at an elevated risk?</h5>
-        <input type="radio" id="hr-yes" name="hr" value="yes">
+        <input type="radio" id="hr-yes" name="hr" value="yes" required>
         <label for="hr-yes">Yes</label>
-        <input type="radio" id="hr-no" name="hr" value="no">
+        <input type="radio" id="hr-no" name="hr" value="no" required>
         <label for="hr-no">No</label><br><br>  
 
         <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit"> 

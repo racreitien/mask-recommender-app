@@ -3,9 +3,9 @@
 {% block content %}
     <form action="/form5-data" method = "POST">
         <h5>Is everyone in attendance at a low risk for covid?</h5>
-        <input type="radio" id="lr-yes" name="lr" value = "yes">
+        <input type="radio" id="lr-yes" name="lr" value = "yes" required>
         <label for="lr-yes">Yes</label>
-        <input type="radio" id="lr-no" name="lr" value = "no">
+        <input type="radio" id="lr-no" name="lr" value = "no" required>
         <label for="lr-no">No/Not sure</label><br><br>
         <input type="submit" class="btn btn-primary btn-lg px-4" value="Submit">
     </form>
