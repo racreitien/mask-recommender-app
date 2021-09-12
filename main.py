@@ -12,16 +12,37 @@ app = Flask(__name__)
 
 @app.route("/")
 def first():
-    default_info = {"name": None, "age": None, "indoors":False}
-    information = getattr(g, "information", default_info)
+    information = []
 
     return render_template("index.html", information=information)
+
 
 @app.route("/second", methods = ["POST"])
 def second():
     if request.method == "POST":
+        # get information form first form
         form_data = request.form
-        return render_template("second.html", form_data=form_data)
+        user_info = {}
+        for key, value in form_data.items():
+            user_info[key] = value
+
+        # initialize g object information
+        g._information = {}
+        setattr(g, "_information", user_info)
+
+        print("user_info data: \n")
+        for info in user_info:
+            print(info + ": " + user_info[info])
+
+        # no mask if 2 or younger
+        if (user_info["age"] == "no"): 
+            return render_template("nomask.html", form_data=form_data)
+        # mask if pre-existing conditions or unvaccinated indoors
+        elif (user_info["hr"] == "yes" or (user_info["vaccinated"] == "no" and user_info["indoors"] == "yes")):
+            return render_template("maskup.html", form_data=form_data)
+        else:
+            return render_template("third.html")
+
 
 @app.route("/third")
 def third():
@@ -29,7 +50,8 @@ def third():
     information = getattr(g, "information", default_info)
 
     return render_template("third.html", information=information)   
-      
+
+
 @app.route("/fourth")
 def fourth():
     default_info = {"Crowded":False}
@@ -38,13 +60,24 @@ def fourth():
     return render_template("fourth.html", information=information)
 
 
+@app.route("/third", methods = ["POST"])
+def third():
+    
+    # get more info 
+    return render_template("third.html")
 
 
+@app.route("/fifth")
+def fifth():
+    default_info = {"everyoneVax":False}
+    information = getattr(g, "information", default_info)
+
+    return render_template("fifth.html", information=information)
 
 
+@app.route("/sixth")
+def sixth():
+    default_info = {"lowRisk":False}
+    information = getattr(g, "information", default_info)
 
-
-
-
-
-
+    return render_template("sixth.html", information=information)
