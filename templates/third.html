@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for info in information %}
+        <h4>{{ info }}: {{ information[info] }}</h4>
+    {% endfor %}
+
+    <form action="/third" method = "POST">
+        <p>Will you be at one of these locations: A K-12 school, onboard a plane, nursing home, or gym/fitness center?<br>
+            <input type="radio" id="locations-yes" name="locations">
+            <label for="locations-yes">Yes</label><br>
+            <input type="radio" id="locations-no" name="locations">
+            <label for="locations-no">No</label><br>  
+            <input type="submit" value="Submit"> 
+        </p>
+    </form>
+{% endblock %}

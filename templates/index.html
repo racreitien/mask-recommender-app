@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{%block content %}
+{% block content %}
     {% for info in information %}
         <h4>{{ info }}: {{ information[info] }}</h4>
     {% endfor %}

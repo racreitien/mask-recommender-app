@@ -23,8 +23,19 @@ def second():
         form_data = request.form
         return render_template("second.html", form_data=form_data)
 
+@app.route("/third")
+def third():
+    default_info = {"Locations":False}
+    information = getattr(g, "information", default_info)
 
+    return render_template("third.html", information=information)   
+      
+@app.route("/fourth")
+def fourth():
+    default_info = {"Crowded":False}
+    information = getattr(g, "information", default_info)
 
+    return render_template("fourth.html", information=information)
 
 
 
