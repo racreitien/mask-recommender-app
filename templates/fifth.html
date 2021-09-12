@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <form action="/TBD" method = "POST">
+        <p>Is everyone around you going to be vaccinated?<br>
+            <input type="radio" id="everyoneVax-yes" name=everyoneVaccinated>
+            <label for="everyoneVax-yes">Yes</label>
+            <input type="radio" id="everyoneVax-no" name=everyoneVaccinated>
+            <label for="everyoneVax-no">No/Not sure</label><br>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+{% endblock %}

@@ -49,3 +49,18 @@ def third():
     
     # get more info 
     return render_template("third.html")
+
+
+@app.route("/fifth")
+def fifth():
+    default_info = {"everyoneVax":False}
+    information = getattr(g, "information", default_info)
+
+    return render_template("fifth.html", information=information)
+
+@app.route("/sixth")
+def sixth():
+    default_info = {"lowRisk":False}
+    information = getattr(g, "information", default_info)
+
+    return render_template("sixth.html", information=information)
