@@ -61,7 +61,7 @@ def fourth():
 
 
 @app.route("/third", methods = ["POST"])
-def third():
+def third2():
     
     # get more info 
     return render_template("third.html")
